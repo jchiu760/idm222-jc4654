@@ -67,7 +67,7 @@ h3 {
 h4 {
     margin: 0 1rem;
     text-align: center;
-    font-size: 2vw;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
@@ -76,10 +76,23 @@ h4 {
 /* for hero card subtxt */
 h5 {
 text-align: center;
-font-size: 1.5vw;
+font-size: 16px;
 font-weight: 400;
-line-height: normal;
-margin: 1rem 0;
+line-height: 150%;
+margin: 0 1rem;
+}
+
+.hero-inner h5 {
+    margin: 0 1rem;
+}
+
+@media (min-width: 390px) {
+    h4 {
+        font-size: 2vw;
+    }
+    h5 {
+        font-size: 1.5vw;
+    }
 }
 
 p {
@@ -101,8 +114,8 @@ p {
 /* --- */
 
 button {
-    width: 25vw;
-    height: 6vw;
+    width: 40vw;
+    height: 14vw;
     flex-shrink: 0;
     border-radius: 7px;
     border: 5px solid #E9E2BD;
@@ -111,8 +124,17 @@ button {
     /* button text  */
     color: #313131;
     text-align: center;
-    font-size: 2vw;
+    font-size: 16px;
     font-style: normal;
+    line-height: 130%;
+}
+
+@media (min-width: 390px) {
+    button {
+        width: 25vw;
+        height: 6vw;
+        font-size: 2vw;
+    }
 }
 
 .button-catalog {
@@ -331,9 +353,18 @@ button {
     margin-top: 12vh;
 }
 
+
 .hero-inner h1 {
-    padding-top: 5rem;
+    padding: 6.5rem 0 0 1rem;
 }
+
+
+@media (min-width: 390px) {
+    .hero-inner h1 {
+        padding: 5rem 0 0 3rem;
+    }
+}
+
 
 .hero-card {
     top: 50%;
@@ -438,10 +469,18 @@ button {
     position: relative;
     width: 100vw;
     height: auto;
-    background: url('../media/sectionWavyPaper.png') no-repeat;
-    background-size: cover;
-    margin-top: -66vh;
+    background: url('../media/sectionWavyPaperMobile.png') no-repeat;
+    background-size: contain;
+    margin-top: 0;
     z-index: 20;
+}
+
+@media (min-width: 390px) {
+    .wavy-paper {
+        background: url('../media/sectionWavyPaper.png') no-repeat;
+        background-size: cover;
+        margin-top: -66vh;
+    }
 }
 
 .about {
@@ -478,10 +517,6 @@ button {
     transform: translateY(-20vh);
 }
 
-/* .home-card-gallery h3 {
-    padding-top: 3rem;
-} */
-
 .home-turkey {
     width: 398.262px;
     height: 580.976px;
@@ -494,10 +529,6 @@ button {
 }
 
 /* CATALOG  */
-
-.hero-inner h1 {
-    padding-left: 3rem;
-}
 
 .hero-inner h2 {
     padding-left: 3rem;
@@ -530,8 +561,14 @@ button {
 }
 
 .catalog-item-strawberry p {
-    width: 50vw;
+    width: 80vw;
     text-align: center;
+}
+
+@media (min-width: 390px) {
+    .catalog-item-strawberry p {
+        width: 50vw;
+    }
 }
 
 /* ORDER */
@@ -870,7 +907,8 @@ input[type="text"], input[type="email"], input[type="tel"] {
 }
 
 .about-blurb {
-    padding-top: 20vh;
+    padding-top: 24vh;
+    padding-bottom: 5vh;
     line-height: 200%;
 }
 
@@ -887,16 +925,28 @@ input[type="text"], input[type="email"], input[type="tel"] {
     position: relative;
     width: 100vw;
     height: auto;
-    background: url('../media/sectionWavyPaper.png') no-repeat;
-    background-size: cover;
-    margin-top: -47vh;
+    background: url('../media/sectionWavyPaperMobile.png') no-repeat;
+    margin-top: -28vh;
     z-index: 20;
 }
 
 .about p {
-    margin: 0 15rem;
+    margin: 0 3rem;
     padding-bottom: 2rem;
     text-align: left;
+    font-size: 16px;
+}
+
+@media (min-width: 390px) {
+    .about-wavy-paper {
+        background: url('../media/sectionWavyPaper.png') no-repeat;
+        background-size: cover;
+        margin-top: -40vh;
+    }
+    .about p {
+        margin: 0 15rem;
+        font-size: 20px;
+    }
 }
 
 .about button {
