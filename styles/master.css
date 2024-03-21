@@ -143,147 +143,163 @@ button {
 
 /* NOT MOBILE  */
 
-.navbar {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+@media (min-width: 390px) {
+    .navbar-mobile {
+        display: none;
+    }
 
-.navmenu-desktop {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: row;
-    gap: 5vw;
-}
+    .navbar-desktop {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .navmenu-desktop {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: row;
+        gap: 5vw;
+    }
+    
+    .nav-item {
+        color: #313131;
+        text-align: center;
+        font-family: Mindset;
+        font-size: 2vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 131.023%; /* 47.168px */
+        text-decoration: none;
+    }
 
-.nav-item {
-    color: #313131;
-    text-align: center;
-    font-family: Mindset;
-    font-size: 2vw;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 131.023%; /* 47.168px */
-    text-decoration: none;
 }
 
 /* MOBILE */
 
-.navmenu-mobile {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    align-items: center;
-    justify-content: center;
-    height: 11vh;
-    width: 100vw;
-    z-index: 55;
-}
+@media (max-width: 390px) {
+    .navbar-desktop {
+        display: none;
+    }
 
-.navbar .menu-items {
-    display: flex;
-}
+    .navmenu-mobile {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        justify-content: center;
+        height: 11vh;
+        width: 100vw;
+        z-index: 55;
+    }
 
-.navbar .navmenu-mobile ul {
-    list-style: none;
-}
-
-.checkbox {
-    position: absolute;
-    width: 100.286px;
-    height: 82.93px;
-    top: 20px;
-    left: 20px;
-    z-index: 5;
-    opacity: 0;
-}
-
-.nav-open {
-    display: block;
-    width: 100.286px;
-    height: 82.93px;
-    position: absolute;
-    top: 17px;
-    left: 20px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.nav-open .line {
-    height: 14.885px;
-    width: 100%;
-    background: #EEA38D;
-    border-radius: 5px;
-
-}
-
-.nav-open .line1 {
-    transform-origin: 0% 0%;
-    transition: transform 0.4s ease-in-out;
-}
-
-.nav-open .line2 {
-    transition: transform 0.2s ease-in-out;
-}
-
-.nav-open .line3 {
-    transform-origin: 0% 100%;
-    transition: transform 0.4s ease-in-out;
-}
-
-.navbar .menu-items {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding-top: 30rem;
-    padding-bottom: 40rem;
-    gap: 3rem;
+    .navbar-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1rem;
+    }
     
-    background: url(../media/texturePaper.png), lightgray 50% / cover no-repeat;
-    background-size: cover;
-    background-blend-mode: multiply;
-    background-color: #E9D7BD;
-
-    height: 100vh;
-    width: 100%;
-    transform: translate(-150%);
-    margin-left: -40px;
-    padding-left: 50px;
-    transition: transform 0.5s ease-in-out;
-    text-align: center;
-    top: 57rem;
-}
-
-.navbar .menu-items li {
-    margin-bottom: 1.2rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.navmenu-mobile input[type="checkbox"]:checked ~ .menu-items {
-    transform: translateX(0);
-  }
-  
-  .navmenu-mobile input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-    transform: rotate(45deg);
-  }
-  
-  .navmenu-mobile input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-    transform: scaleY(0);
-  }
-  
-  .navmenu-mobile input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-    transform: rotate(-45deg);
-  }
-
-.navCart {
-    height: 102px;
+    .navbar-mobile .navmenu-mobile ul {
+        list-style: none;
+    }
+    
+    .checkbox {
+        position: absolute;
+        width: 52px;
+        height: 43px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+    
+    .nav-open {
+        display: block;
+        width: 52px;
+        height: 43px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .nav-open .line {
+        height: 8px;
+        width: 100%;
+        background: #EEA38D;
+        border-radius: 1px;
+    
+    }
+    
+    .nav-open .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .nav-open .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .nav-open .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .navbar-mobile .menu-items {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+        
+        background: url(../media/texturePaper.png), lightgray 50% / cover no-repeat;
+        background-size: cover;
+        background-blend-mode: multiply;
+        background-color: #E9D7BD;
+    
+        height: 100vh;
+        width: 100vw;
+        transform: translate(-150%);
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        text-align: center;
+    }
+    
+    .menu-items a {
+        font-size: 1.5rem;
+        font-family: Mindset;
+        text-decoration: none;
+    }
+    
+    .navmenu-mobile input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+      }
+      
+      .navmenu-mobile input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(45deg);
+      }
+      
+      .navmenu-mobile input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+      }
+      
+      .navmenu-mobile input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-45deg);
+      }
+    
+    .navCart {
+        height: 102px;
+    }
 }
 
 /* --- */
