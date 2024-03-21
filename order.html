@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fluffy Bakery</title>
+  <link 
+  rel="stylesheet" 
+  href="styles/master.css" 
+  media="screen"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header class="hero-background-index">
+    <nav class="navbar">
+      <ul class="navmenu-desktop">
+        <li><a class="nav-item" href="./index.html">Home</a></li>
+        <li><a class="nav-item" href="./catalog.html">Catalog</a></li>
+        <li><a class="nav-item" href="./gallery.html">Gallery</a></li>
+        <li><a class="nav-item" href="./about.html">About</a></li>
+        <li><a class="nav-item" href="./cart.html">Cart</a></li>
+      </ul>
+    </nav>
+    <div class="hero-inner hero-catalog">
+      <h1>
+        catalog
+      </h1>
+    </div>
+    <div class="hero-card hero-card-order">
+      <h4>
+        strawberry shortcake
+      </h4>
+      <h5>
+        baking powder - butter - flour - strawberries - sugar
+      </h5>
+    </div>
+  </header>
+  <main>
+  <section class="order-main">
+    <section class="order-form">
+      <h4>
+        customize your strawberry shortcake!
+      </h4>
+      <div class="order-form-inputs">
+        <div class="order-form-size">
+          <h5>
+            select size
+          </h5>
+          <div class="input-radio-tile" onclick="highlightTile(this)">
+            <input type="radio" id="size-8" name="size" class="radio-button">
+            <label for="size-8" class="tile-label">
+              <div class="tile-content">                
+              <img src="./media/orderSize1.svg" alt="8 Inches Round option">
+                <h5>
+                    8" round
+                </h5>
+              </div>
+            </label>
+          </div>
+          <div class="input-radio-tile" onclick="highlightTile(this)">
+            <input type="radio" id="size-5" name="size" class="radio-button">
+            <label for="size-5" class="tile-label">
+              <div class="tile-content">                
+              <img src="./media/orderSize2.svg" alt="5 Inches Round option">
+                <h5>
+                    5" round
+                </h5>
+              </div>
+            </label>
+          </div>
+          <!-- script for scuffed radio buttons -->
+          <script>
+            function highlightTile(selectedTile) {
+              document.querySelectorAll('.input-radio-tile').forEach(tile => {
+                tile.style.backgroundColor = '';
+              });
+              selectedTile.style.backgroundColor = 'rgba(151, 102, 0, 0.15)';
+            }
+            </script>
+        </div>
+        <div class="order-form-other">
+          <div class="order-form-toppings">
+            <h5>add toppings</h5>
+            <div class="input-section-checkbox">
+              <label class="input-checkbox">
+                <input class="checkbox-style"  type="checkbox" name="toppings" value="raspberries">
+                <span class="checkmark"></span>
+                <h5>raspberries</h5>
+              </label>
+              <label class="input-checkbox">
+                <input class="checkbox-style" type="checkbox" name="toppings" value="blueberries">
+                <span class="checkmark"></span>
+                <h5>blueberries</h5>
+              </label>
+              <label class="input-checkbox">
+                <input class="checkbox-style" type="checkbox" name="toppings" value="blackberries">
+                <span class="checkmark"></span>
+                <h5>blackberries</h5>
+              </label>
+            </div>
+          </div>
+          <!-- script for scuffed checkbox -->
+          <script>
+            document.querySelectorAll('.input-checkbox input').forEach(function(checkbox) {
+              checkbox.addEventListener('change', function() {
+                const checkmark = this.nextElementSibling;
+                if (this.checked) {
+                checkmark.style.backgroundColor = '#824836';
+                } else {
+                checkmark.style.backgroundColor = 'transparent';
+                }
+              });
+            });
+          </script>
+          <div class="order-form-additional">
+            <h5>
+              additional comments
+            </h5>
+            <div class="input-section-textbox">
+              <textarea name="toppings" rows="4" cols="50" placeholder="Put a tiny frog in the corner"></textarea>
+            </div>
+          </div>
+      </div>
+      </div>
+    </section>
+    <section class="order-image">
+      <img
+      src="./media/orderCakeStrawberry.jpg"
+      >
+      <p>
+        our strawberry shortcake pays homage to Philadelphia's late bakery, Swiss Haus. <br>
+it is a bakers' favorite, known for its subtle almond notes and ever so fluffy textures!
+      </p>
+    </section>
+  </section>
+  <div class="order-bottom">
+    <h3>
+      total: $14
+    </h3>
+    <button onclick="window.location='./cart.html';">
+      add to cart!
+    </button>
+  </div>
+  </main>
+</body>
+</html>
