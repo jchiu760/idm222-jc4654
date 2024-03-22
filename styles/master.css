@@ -11,7 +11,7 @@ body {
     width: 100%;
     height: 100vh;
     background: url(../media/texturePaper.png), no-repeat;
-    background-size: 200%;
+    background-size: 300%;
     background-blend-mode: multiply;
     background-color: #F9F7E8;
 }
@@ -134,6 +134,7 @@ button {
     font-size: 16px;
     font-style: normal;
     line-height: 130%;
+    cursor: pointer;
 }
 
 @media (min-width: 413px) {
@@ -630,6 +631,9 @@ button {
     .order-main .order-image {
         padding: 0;
     }
+    .order-form h4 {
+        padding-bottom: 0;
+    }
 }
 
 .order-form {
@@ -640,9 +644,13 @@ button {
     padding-top: 20vh;
 }
 
+.order-form h4 {
+    padding-bottom: 2rem;
+}
+
 .order-form-inputs {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -661,7 +669,7 @@ button {
 }
 
 .input-radio-tile {
-    padding: 10px;
+    padding: 20px;
     cursor: pointer;
     border-radius: 10px;
     border: 1px solid #9B5C49;
@@ -676,7 +684,7 @@ button {
   }
   
   .tile-content {
-    width: 10vw;
+    width: 33vw;
     height: auto;
   }
 
@@ -686,6 +694,19 @@ button {
     object-fit: contain;
     object-position: center;
   }
+
+  @media (min-width: 413px) {
+    .input-radio-tile {
+        padding: 10px;
+    }
+    .order-form-inputs {
+        flex-direction: row;
+    }
+    .tile-content {
+        width: 10vw;
+    }
+}
+
   
 /* order form for toppings and extra comments  */
 
@@ -702,7 +723,7 @@ button {
 }
 
 .input-section-checkbox {
-    width: 20vw;
+    width: 70vw;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -710,6 +731,7 @@ button {
     border-radius: 10px;
     border: 1px solid #824836;
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    gap: 1rem;
 }
 
 .input-checkbox {
@@ -762,13 +784,28 @@ button {
 .input-checkbox h5 {
     margin-left: 8px;
     font-size: 16px;
-    font-size: 1.5vw;
+}
+
+.order-form-other h5 {
+    margin: 1rem;
+}
+
+@media (min-width: 413px) {
+    .order-form-other h5 {
+        margin: 0 1rem;
+    }
+    .input-section-checkbox {
+        width: 20vw;
+    }
+    .input-checkbox h5 {
+        font-size: 1.5vw;
+    }
 }
 
 /* toppings input  */
 
 .input-section-textbox {
-    width: 20vw;
+    width: 70vw;
     height: 18vh;
     display: flex;
     flex-direction: column;
@@ -795,7 +832,16 @@ button {
 
 ::placeholder {
     color: rgba(155, 92, 73, 0.50);
-    font-size: 1.5vw;
+    font-size: 16px;
+}
+
+@media (min-width: 413px) {
+    .input-section-textbox {
+        width: 20vw;
+    }
+    ::placeholder {
+        font-size: 1.5vw;
+    }
 }
 
 /* image and stuff */
@@ -815,8 +861,14 @@ button {
 }
 
 .order-image p {
-    font-size: 1.5vw;
     text-align: center;
+}
+
+@media (min-width: 413px) {
+    .order-image p {
+        font-size: 1.5vw;
+    }
+
 }
 
 .order-bottom {
@@ -869,9 +921,9 @@ padding-bottom: 2rem;
 }
 
 input[type="text"], input[type="email"], input[type="tel"] {
-    width: 100%; /* or a specific width, e.g., 300px */
-    padding: 12px 20px; /* Adjust the padding to match the design */
-    margin: 8px 0; /* Spacing between the fields */
+    width: 80vw;
+    padding: 12px 20px;
+    margin: 8px 0;
     display: inline-block;
     border: 1px solid #824836;
     border-radius: 10px;
