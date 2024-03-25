@@ -1,5 +1,5 @@
-# IDM22 - Fluffy Bakery
-Alterna2tive filename: idm222-jc4654
+# IDM222 - Fluffy Bakery
+Alternative filename: idm222-jc4654
 ### Welcome!
 You've found the repository for Fluffy Bakery!
 
